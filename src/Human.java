@@ -1,27 +1,61 @@
 public class Human {
-    String name;
-    int year;
-    String city;
+    private String name;
+    private int year;
+    private String city;
     String jobTitle;
 
-    void welcome(){
-        System.out.println("Привет! Меня зовут "+name+" Я из города "+city+"Я родился в "+year+"году. Я работаю на должности "+jobTitle+" Будем знакомы");
+    void welcome() {
+        System.out.println("Привет! Меня зовут " + getName() + " Я из города " + getCity()+ "Я родился в " + getYear() + "году. Я работаю на должности " + jobTitle + " Будем знакомы");
     }
 
     public Human(String name, int year, String city, String jobTitle) {
-        if (name==null) {
-            this.name="Инфорамция не указана";
-        }else{this.name = name;
-        };
-
-        if (year<0){
-            this.year=0;
-        } else {this.year = year;
-        };
-        if (city==null) {
-            this.city="Инфорамция не указана";
-        }else{this.city = city;
-        };
+        this.name = name;
+        this.year = year;
+        this.city = city;
         this.jobTitle = jobTitle;
     }
-}
+
+    public int setYear() {
+        if (year < 0) {
+            year = 0;
+        } else year = year;
+
+        return year;
+    }
+
+        public String getCity () {
+            return city;
+        }
+
+        public void setCity (String city) {
+            if (city == null) {
+                this.city = "Инфорамция не указана";
+            } else {
+                this.city = city;
+            }
+        }
+    public int getYear () {
+        return year;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        if (name == null) {
+            this.name = "Инфорамция не указана";
+        } else {
+            this.name = name;
+            this.name = name;
+        }
+    }
+
+
+
+
+    }
+
+
+
+
